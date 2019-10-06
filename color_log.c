@@ -51,6 +51,11 @@ void log_printf(int level, char* fmt, ...)
 
     va_start(arg, fmt);
     if (is_tty()) {
+        int w = console_width();
+        char str[w + 1];
+        int wout;
+        bool b_lf = false;
+
         switch (level) {
           case LOG_LEVEL_ERR:
             fprintf(stdout, COLOR_FG_LRED);
@@ -62,21 +67,18 @@ void log_printf(int level, char* fmt, ...)
             fprintf(stdout, COLOR_FG_CYAN);
             break;
         }
-    }
-
-    if (is_tty()) {
-        int w = console_width();
-        char str[w + 1];
-        int wout;
         wout = vsnprintf(str, w + 1, fmt, arg);
+        if (wout < w && str[wout - 1] == '\n') {
+            str[wout - 1] = '\0';
+            b_lf = true;
+        }
         fputs(str, stdout);
-        if (wout > w)
+
+        fprintf(stdout, COLOR_RESET);
+        if (b_lf || wout > w)
             fputc('\n', stdout);
     } else
         vfprintf(stdout, fmt, arg);
-
-    if (is_tty())
-        fprintf(stdout, COLOR_RESET);
 
     va_end(arg);
 }
