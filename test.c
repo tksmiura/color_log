@@ -1,51 +1,54 @@
+/* MIT License
+ * Copyright (c) 2019 TAKESHI MIURA
+ * https://github.com/tksmiura/color_log
+ */
 #include "color_log.h"
 
-/* test */
+/* test macros */
 
 int main(int argc, char *argv[])
 {
-    printf("デフォルト\n");
+    printf("color_log.h defined macros...\n\n");
 
-    printf(COLOR_BG_BLACK "後景色が黒\n" COLOR_RESET);
-    printf(COLOR_BG_RED "後景色が赤\n" COLOR_RESET);
-    printf(COLOR_BG_GREEN "後景色が緑\n" COLOR_RESET);
-    printf(COLOR_BG_YELLOW "後景色が黄色\n" COLOR_RESET);
-    printf(COLOR_BG_BLUE "後景色が青\n" COLOR_RESET);
-    printf(COLOR_BG_MAGENTA "後景色がマゼンタ\n" COLOR_RESET);
-    printf(COLOR_BG_CYAN "後景色がシアン\n" COLOR_RESET);
-    printf(COLOR_BG_WHITE "後景色が白\n" COLOR_RESET);
+    printf(COLOR_BG_BLACK "COLOR_BG_BLACK" COLOR_RESET "\n");
+    printf(COLOR_BG_RED "COLOR_BG_RED" COLOR_RESET "\n");
+    printf(COLOR_BG_GREEN "COLOR_BG_GREEN" COLOR_RESET "\n");
+    printf(COLOR_BG_YELLOW "COLOR_BG_YELLOW" COLOR_RESET "\n");
+    printf(COLOR_BG_BLUE "COLOR_BG_BLUE" COLOR_RESET "\n");
+    printf(COLOR_BG_MAGENTA "COLOR_BG_MAGENTA" COLOR_RESET "\n");
+    printf(COLOR_BG_CYAN "COLOR_BG_CYAN" COLOR_RESET "\n");
+    printf(COLOR_BG_WHITE "COLOR_BG_WHITE" COLOR_RESET "\n");
 
-    printf(COLOR_BG_LBLACK "後景色が黒\n" COLOR_RESET);
-    printf(COLOR_BG_LRED "後景色が赤\n" COLOR_RESET);
-    printf(COLOR_BG_LGREEN "後景色が緑\n" COLOR_RESET);
-    printf(COLOR_BG_LYELLOW "後景色が黄色\n" COLOR_RESET);
-    printf(COLOR_BG_LBLUE "後景色が青\n" COLOR_RESET);
-    printf(COLOR_BG_LMAGENTA "後景色がマゼンタ\n" COLOR_RESET);
-    printf(COLOR_BG_LCYAN "後景色がシアン\n" COLOR_RESET);
-    printf(COLOR_BG_LWHITE "後景色が白\n" COLOR_RESET);
+    printf(COLOR_BG_LBLACK "COLOR_BG_LBLACK" COLOR_RESET "\n");
+    printf(COLOR_BG_LRED "COLOR_BG_LRED" COLOR_RESET "\n");
+    printf(COLOR_BG_LGREEN "COLOR_BG_LGREEN" COLOR_RESET "\n");
+    printf(COLOR_BG_LYELLOW "COLOR_BG_LYELLOW" COLOR_RESET "\n");
+    printf(COLOR_BG_LBLUE "COLOR_BG_LBLUE" COLOR_RESET "\n");
+    printf(COLOR_BG_LMAGENTA "COLOR_BG_LMAGENTA" COLOR_RESET "\n");
+    printf(COLOR_BG_LCYAN "COLOR_BG_LCYAN" COLOR_RESET "\n");
+    printf(COLOR_BG_LWHITE "COLOR_BG_LWHITE" COLOR_RESET "\n");
 
-    printf(COLOR_FG_BLACK "前景色が黒\n" COLOR_RESET);
-    printf(COLOR_FG_RED "前景色が赤\n" COLOR_RESET);
-    printf(COLOR_FG_GREEN "前景色が緑\n" COLOR_RESET);
-    printf(COLOR_FG_YELLOW "前景色が黄色\n" COLOR_RESET);
-    printf(COLOR_FG_BLUE "前景色が青\n" COLOR_RESET);
-    printf(COLOR_FG_MAGENTA "前景色がマゼンタ\n" COLOR_RESET);
-    printf(COLOR_FG_CYAN "前景色がシアン\n" COLOR_RESET);
-    printf(COLOR_FG_WHITE "前景色が白\n" COLOR_RESET);
+    printf(COLOR_FG_BLACK "COLOR_FG_BLACK" COLOR_RESET "\n");
+    printf(COLOR_FG_RED "COLOR_FG_RED" COLOR_RESET "\n");
+    printf(COLOR_FG_GREEN "COLOR_FG_GREEN" COLOR_RESET "\n");
+    printf(COLOR_FG_YELLOW "COLOR_FG_YELLOW" COLOR_RESET "\n");
+    printf(COLOR_FG_BLUE "COLOR_FG_BLUE" COLOR_RESET "\n");
+    printf(COLOR_FG_MAGENTA "COLOR_FG_MAGENTA" COLOR_RESET "\n");
+    printf(COLOR_FG_CYAN "COLOR_FG_CYAN" COLOR_RESET "\n");
+    printf(COLOR_FG_WHITE "COLOR_FG_WHITE" COLOR_RESET "\n");
 
-    printf(COLOR_FG_LBLACK "前景色が黒\n" COLOR_RESET);
-    printf(COLOR_FG_LRED "前景色が赤\n" COLOR_RESET);
-    printf(COLOR_FG_LGREEN "前景色が緑\n" COLOR_RESET);
-    printf(COLOR_FG_LYELLOW "前景色が黄色\n" COLOR_RESET);
-    printf(COLOR_FG_LBLUE "前景色が青\n" COLOR_RESET);
-    printf(COLOR_FG_LMAGENTA "前景色がマゼンタ\n" COLOR_RESET);
-    printf(COLOR_FG_LCYAN "前景色がシアン\n" COLOR_RESET);
-    printf(COLOR_FG_LWHITE "前景色が白\n" COLOR_RESET);
+    printf(COLOR_FG_LBLACK "COLOR_FG_LBLACK" COLOR_RESET "\n");
+    printf(COLOR_FG_LRED "COLOR_FG_LRED" COLOR_RESET "\n");
+    printf(COLOR_FG_LGREEN "COLOR_FG_LGREEN" COLOR_RESET "\n");
+    printf(COLOR_FG_LYELLOW "COLOR_FG_LYELLOW" COLOR_RESET "\n");
+    printf(COLOR_FG_LBLUE "COLOR_FG_LBLUE" COLOR_RESET "\n");
+    printf(COLOR_FG_LMAGENTA "COLOR_FG_LMAGENTA" COLOR_RESET "\n");
+    printf(COLOR_FG_LCYAN "COLOR_FG_LCYAN" COLOR_RESET "\n");
+    printf(COLOR_FG_LWHITE "COLOR_FG_LWHITE" COLOR_RESET "\n");
 
-    printf(COLOR_UNDERLINE  "UNDERLINE\n" COLOR_RESET);
-    printf(COLOR_BOLD  "ボールド\n" COLOR_RESET);
-    printf(COLOR_REVERSE  "反転\n" COLOR_RESET);
+    printf(COLOR_UNDERLINE  "COLOR_UNDERLINE" COLOR_RESET "\n");
+    printf(COLOR_BOLD  "COLOR_BOLD" COLOR_RESET "\n");
+    printf(COLOR_REVERSE  "COLOR_REVERSE" COLOR_RESET "\n");
 
-
-    printf("デフォルト\n");
+    printf(COLOR_RESET "COLOR_RESET(reset color settings)\n");
 }

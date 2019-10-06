@@ -1,3 +1,7 @@
+/* MIT License
+ * Copyright (c) 2019 TAKESHI MIURA
+ * https://github.com/tksmiura/color_log
+ */
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdbool.h>
@@ -52,7 +56,7 @@ void log_printf(int level, char* fmt, ...)
             fprintf(stdout, COLOR_FG_LYELLOW);
             break;
           case LOG_LEVEL_INFO:
-            fprintf(stdout, COLOR_FG_LCYAN);
+            fprintf(stdout, COLOR_FG_CYAN);
             break;
         }
     }

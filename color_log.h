@@ -1,3 +1,7 @@
+/* MIT License
+ * Copyright (c) 2019 TAKESHI MIURA
+ * https://github.com/tksmiura/color_log
+ */
 #ifndef __COLOR_H__
 #define __COLOR_H__
 

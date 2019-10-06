@@ -1,12 +1,17 @@
+/* MIT License
+ * Copyright (c) 2019 TAKESHI MIURA
+ * https://github.com/tksmiura/color_log
+ */
 #include "color_log.h"
 
-/* test */
+/* test APIs */
 
 int main(int argc, char *argv[])
 {
-    printf("デフォルト\n");
+    printf("color_log.c defined APIs\n\n");
+
     if (is_tty()) {
-        log_printf(LOG_LEVEL_DEBUG, "width %d\n", console_width());
+        log_printf(LOG_LEVEL_DEBUG, "console_width = %d\n", console_width());
     }
 
     log_printf(LOG_LEVEL_DEBUG, "this is debug\n");
@@ -17,7 +22,4 @@ int main(int argc, char *argv[])
     log_printf(LOG_LEVEL_ERR, "test long log data.............................................................\n");
     log_printf(LOG_LEVEL_ERR, "test long log data..............................................................\n");
     log_printf(LOG_LEVEL_ERR, "test long log data...............................................................\n");
-    log_printf(LOG_LEVEL_ERR, "test long log data...................................................................\n");
-
-    printf("デフォルト\n");
 }

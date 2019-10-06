@@ -11,12 +11,13 @@ see sample program test.c test2.c
 
 build
 ```
-$ gcc -o test test.c color_log.c
+$ gcc -o test test.c
 $ gcc -o test2 test2.c color_log.c
 ```
 
 run output console or redirect
 ```
 ./test
-./test | cat
+./test2
+./test2 | cat
 ```
