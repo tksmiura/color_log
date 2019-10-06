@@ -66,10 +66,6 @@ extern void log_printf(int level, char* fmt, ...);
         log_printf(LOG_LEVEL_DEBUG, "%s:%d: (%s) " fmt,         \
                    __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
     } while(0);
-#define DEBUG_LOG(fmt, ...) do {                                \
-        log_printf(LOG_LEVEL_DEBUG, "%s:%d: (%s) " fmt,         \
-                   __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
-    } while(0);
 #define INFO_LOG(fmt, ...) do {                                \
         log_printf(LOG_LEVEL_INFO, "%s:%d: (%s) " fmt,         \
                    __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
