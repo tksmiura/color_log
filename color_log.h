@@ -61,4 +61,25 @@ extern bool is_tty(void);
 extern int console_width(void);
 extern void log_printf(int level, char* fmt, ...);
 
+
+#define DEBUG_LOG(fmt, ...) do {                                \
+        log_printf(LOG_LEVEL_DEBUG, "%s:%d: (%s) " fmt,         \
+                   __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
+    } while(0);
+#define DEBUG_LOG(fmt, ...) do {                                \
+        log_printf(LOG_LEVEL_DEBUG, "%s:%d: (%s) " fmt,         \
+                   __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
+    } while(0);
+#define INFO_LOG(fmt, ...) do {                                \
+        log_printf(LOG_LEVEL_INFO, "%s:%d: (%s) " fmt,         \
+                   __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
+    } while(0);
+#define WARN_LOG(fmt, ...) do {                                \
+        log_printf(LOG_LEVEL_WARN, "%s:%d: (%s) " fmt,         \
+                   __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
+    } while(0);
+#define ERR_LOG(fmt, ...) do {                                \
+        log_printf(LOG_LEVEL_ERR, "%s:%d: (%s) " fmt,         \
+                   __FILE__, __LINE__, __func__, ## __VA_ARGS__);  \
+    } while(0);
 #endif /* __COLOR_H__ */

@@ -22,4 +22,9 @@ int main(int argc, char *argv[])
     log_printf(LOG_LEVEL_ERR, "test long log data.............................................................\n");
     log_printf(LOG_LEVEL_ERR, "test long log data..............................................................\n");
     log_printf(LOG_LEVEL_ERR, "test long log data...............................................................\n");
+
+    DEBUG_LOG("DEBUG_LOG log ......\n");
+    INFO_LOG("INFO_LOG log........................................................................\n");
+    WARN_LOG("WARN_LOG log.....\n");
+    ERR_LOG("ERR_LOG log.....\n");
 }

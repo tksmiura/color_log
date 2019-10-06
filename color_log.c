@@ -7,6 +7,8 @@
 #include <stdbool.h>
 #include <errno.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 #include <sys/ioctl.h>
 #include "color_log.h"
 
@@ -16,7 +18,8 @@ static bool tty_checked = false;
 bool is_tty(void)
 {
     if (!tty_checked) {
-        stdout_tty = isatty(STDOUT_FILENO);
+        stdout_tty = isatty(STDOUT_FILENO);  /* TODO: not work on emacs */
+        tty_checked = true;
     }
     return stdout_tty;
 }
